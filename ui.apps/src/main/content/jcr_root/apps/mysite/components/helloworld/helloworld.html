@@ -1,0 +1,42 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<sly data-sly-use.newsletter="com.mysite.core.models.NewsletterModel"/>
+<div class="cmp-helloworld" data-cmp-is="helloworld">
+    <h2 class="cmp-helloworld__title">Hello World Component</h2>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
+    </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.mysite.core.models.HelloWorldModel" data-sly-test="${model.message}">
+        <p class="cmp-helloworld__item-label">Model message:</p>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div>
+
+    <div data-sly-test="${newsletter.absolutePublishUrl}">
+        Publish URL: ${newsletter.absolutePublishUrl}
+    </div>
+
+    <hr>
+    <sly data-sly-use.listing="com.mysite.core.models.PageListingModel">
+    <p>JCR Query:  ${listing.jcrQuery.count} pages — ${listing.jcrQuery.durationMs} ms</p>
+    <p>listChildren: ${listing.pageManager.count} pages — ${listing.pageManager.durationMs} ms</p>
+    <p>Stream:      ${listing.streamTraversal.count} pages — ${listing.streamTraversal.durationMs} ms</p>
+
+    <ul data-sly-list.path="${listing.streamTraversal.paths}">
+        <li>${path}</li>
+    </ul>
+</sly>
+</div>

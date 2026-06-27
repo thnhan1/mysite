@@ -1,0 +1,8 @@
+{
+    "externalizer.domains": [
+        "local https://stage-author.mysite.com",
+        "author https://stage-author.mysite.com",
+        "publish https://stage.mysite.com"
+    ],
+    "externalizer.encodedpath": true
+}

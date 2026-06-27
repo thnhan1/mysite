@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:icon="panel"
+          cq:isContainer="true"
+          jcr:description="Accordion that auto-generates items from a Content Fragment for FAQ"
+          jcr:primaryType="cq:Component"
+          jcr:title="Accordion Content Fragment"
+          sling:resourceSuperType="core/wcm/components/accordion/v1/accordion"
+          componentGroup="My Site - Content"/>
