@@ -1,5 +1,7 @@
 # Sample AEM project template
 
+**This Project using Vite, Vue 3 Instead webpack. Read [docs/](./docs) for more details migrate plan.**
+
 This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
 ## Modules
