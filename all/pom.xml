@@ -94,6 +94,12 @@
                             <type>zip</type>
                             <target>/apps/mysite-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>dev.aemvite</groupId>
+                            <artifactId>aem-vite.all</artifactId>
+                            <type>zip</type>
+                            <target>/apps/mysite-vendor-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -210,6 +216,13 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.config</artifactId>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.aemvite</groupId>
+            <artifactId>aem-vite.all</artifactId>
+            <version>3.0.3</version>
             <type>zip</type>
         </dependency>
     </dependencies>

@@ -13,16 +13,22 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.newsletter="com.mysite.core.models.NewsletterModel"/>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"></sly>
+<sly data-sly-test="${clientLibCategoriesJsHead}"
+    data-sly-call="${clientlib.js @ categories=clientLibCategoriesJsHead, esModule=true}"></sly>
+
+<sly data-sly-use.newsletter="com.mysite.core.models.NewsletterModel" />
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Hello World Component</h2>
     <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
         <p class="cmp-helloworld__item-label">Text property:</p>
         <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
     </div>
-    <div class="cmp-helloworld__item" data-sly-use.model="com.mysite.core.models.HelloWorldModel" data-sly-test="${model.message}">
+    <div class="cmp-helloworld__item" data-sly-use.model="com.mysite.core.models.HelloWorldModel"
+        data-sly-test="${model.message}">
         <p class="cmp-helloworld__item-label">Model message:</p>
-        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="model">${model.message}</pre>
     </div>
 
     <div data-sly-test="${newsletter.absolutePublishUrl}">
@@ -31,12 +37,17 @@
 
     <hr>
     <sly data-sly-use.listing="com.mysite.core.models.PageListingModel">
-    <p>JCR Query:  ${listing.jcrQuery.count} pages — ${listing.jcrQuery.durationMs} ms</p>
-    <p>listChildren: ${listing.pageManager.count} pages — ${listing.pageManager.durationMs} ms</p>
-    <p>Stream:      ${listing.streamTraversal.count} pages — ${listing.streamTraversal.durationMs} ms</p>
+        <p>JCR Query: ${listing.jcrQuery.count} pages — ${listing.jcrQuery.durationMs} ms</p>
+        <p>listChildren: ${listing.pageManager.count} pages — ${listing.pageManager.durationMs} ms</p>
+        <p>Stream: ${listing.streamTraversal.count} pages — ${listing.streamTraversal.durationMs} ms</p>
 
-    <ul data-sly-list.path="${listing.streamTraversal.paths}">
-        <li>${path}</li>
-    </ul>
-</sly>
+        <ul data-sly-list.path="${listing.streamTraversal.paths}">
+            <li>${path}</li>
+        </ul>
+
+    </sly>
+    <div class="ms-demo" data-cmp-is="ms-demo" data-name="Nguyen Van A">
+        <!-- Vue mounts here, SSR fallback below -->
+        <noscript>Nguyen Van A</noscript>
+    </div>
 </div>

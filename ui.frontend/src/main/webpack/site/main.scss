@@ -1,5 +1,3 @@
-
 @import 'variables';
 @import 'base';
-@import '../components/**/*.scss';
-@import './styles/*.scss';
+// Component and style SCSS partials are loaded via import.meta.glob in main.ts

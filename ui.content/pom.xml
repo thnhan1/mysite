@@ -101,5 +101,7 @@
             <groupId>com.adobe.aem</groupId>
             <artifactId>uber-jar</artifactId>
         </dependency>
+
+      
     </dependencies>
 </project>

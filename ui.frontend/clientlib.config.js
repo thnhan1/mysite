@@ -47,8 +47,6 @@ module.exports = {
       name: 'clientlib-dependencies',
       categories: ['mysite.dependencies'],
       assets: {
-        // Copy entrypoint scripts and stylesheets into the respective ClientLib
-        // directories
         js: {
           cwd: 'clientlib-dependencies',
           files: ['**/*.js'],
@@ -66,9 +64,9 @@ module.exports = {
       name: 'clientlib-site',
       categories: ['mysite.site'],
       dependencies: ['mysite.dependencies'],
+      esModule: '{Boolean}true',
+      customProperties: ['esModule'],
       assets: {
-        // Copy entrypoint scripts and stylesheets into the respective ClientLib
-        // directories
         js: {
           cwd: 'clientlib-site',
           files: ['**/*.js'],

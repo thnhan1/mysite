@@ -334,7 +334,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[mysite.dependencies,mysite.site]"
+                    clientlibs="[mysite.dependencies]"
                     clientlibsJsHead="mysite.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>

@@ -116,8 +116,8 @@
           <artifactId>frontend-maven-plugin</artifactId>
           <version>${frontend-maven-plugin.version}</version>
           <configuration>
-            <nodeVersion>v16.17.0</nodeVersion>
-            <npmVersion>8.15.0</npmVersion>
+            <nodeVersion>v22.14.0</nodeVersion>
+            <npmVersion>10.9.2</npmVersion>
           </configuration>
           <executions>
             <execution>
@@ -275,6 +275,16 @@ Bundle-DocURL:
                 </options>
               </jackrabbit-nodetypes>
             </validatorsSettings>
+
+            <embeddeds>
+            <!-- Thêm cấu hình này -->
+            <embedded>
+                <groupId>dev.aemvite</groupId>
+                <artifactId>aem-vite.all</artifactId>
+                <type>zip</type>
+                <target>/apps/mysite-vendor-packages/application/install</target>
+            </embedded>
+        </embeddeds>
           </configuration>
           <dependencies>
             <dependency>
@@ -695,6 +705,14 @@ Bundle-DocURL:
         <type>zip</type>
         <version>${core.wcm.components.version}</version>
       </dependency>
+
+      <!-- vite -->
+        <dependency>
+            <groupId>dev.aemvite</groupId>
+            <artifactId>aem-vite.all</artifactId>
+            <version>3.0.2</version>
+            <type>zip</type>
+        </dependency>
       <!-- Testing -->
       <dependency>
         <groupId>org.junit</groupId>
