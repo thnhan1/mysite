@@ -46,6 +46,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <componentGroupName>My Site</componentGroupName>
+    <skip.frontend>false</skip.frontend>
   </properties>
   <build>
     <plugins>
@@ -132,6 +133,7 @@
                 <goal>npm</goal>
               </goals>
               <configuration>
+                <skip>${skip.frontend}</skip>
                 <arguments>ci</arguments>
               </configuration>
             </execution>

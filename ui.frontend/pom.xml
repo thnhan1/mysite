@@ -53,6 +53,7 @@
                             <goal>npm</goal>
                         </goals>
                         <configuration>
+                            <skip>${skip.frontend}</skip>
                             <arguments>run prod</arguments>
                         </configuration>
                     </execution>
@@ -80,6 +81,7 @@
                                     <goal>npm</goal>
                                 </goals>
                                 <configuration>
+                                    <skip>${skip.frontend}</skip>
                                     <arguments>run dev</arguments>
                                 </configuration>
                             </execution>

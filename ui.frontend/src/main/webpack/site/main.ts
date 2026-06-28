@@ -11,6 +11,7 @@ const componentModules = import.meta.glob('../components/**/*.js', { eager: true
 // Vue mount scripts — mỗi file tự mount Vue app vào DOM element tương ứng
 const vueMounts = import.meta.glob('../components/**/*.mount.ts', { eager: true });
 
+
 // Eagerly load all component and page SCSS partials
 const componentStyles = import.meta.glob('../components/**/_*.scss', { eager: true });
 const pageStyles = import.meta.glob('./styles/*.scss', { eager: true });
